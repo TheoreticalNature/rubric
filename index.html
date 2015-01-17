@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <link rel='stylesheet' href='style.css'/>
+
+  <!-- Add our custom font: Open Sans and the icons -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src='script.js'></script>
+  <title>Jeremy's Rubric</title>
+  <link rel="shortcut icon" href="Jeremy.png"/>
+</head>
+
+<!-- ontouchstart makes :active work in mobile Safari -->
+<body ontouchstart="">
+  <main>
+    <header>
+      Jeremy's Amazing Rubric
+    </header>
+
+    <!-- Now make the tiles! -->
+    <!-- Use the <i> to make the icon and number -->
+    <!-- Move the <span>s in CSS so they appear in the bottom left corner -->
+    <ul>
+      <!-- Top Row -->
+      <li class="messages spanhalf">Standards</li>
+      <li class="messages spanhalf">4        Above </li>
+      <li class="messages spanhalf">3        Standard</li>
+      <li class="messages spanhalf">2       Approaching </li>
+      <li class="messages spanhalf">1    Does not meet</li>
+
+      <!-- A Row -->
+      <li class="messages">ELA 1.1. Prewriting: Uses a variety of prewriting strategies
+      </li>
+
+      <li class="messages" id = 'A4'>Brainstorms ideas on some sort of graphic organizer and creates an outline of the essay
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('A4','A1','A2','A3')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'A3'>Brainstorms ideas on some sort of graphic organizer or creates an outline of the essay
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('A3','A1','A2','A4')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'A2'>Prewriting notes/outline are messy and disorganized.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('A2','A1','A4','A3')"></button>
+        </span>
+        </li>
+
+      <li class="messages" id = 'A1'>Prewriting notes or outline or missing.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('A1','A4','A2','A3')"></button>
+        </span>
+      </li>
+
+      <!-- B Row -->
+      <li class="messages">ELA 1.2. Drafting and Revising: Uses a variety of strategies to draft and revise written work
+      </li>
+
+      <li class="messages" id = 'B4'>Writes a first draft
+        Has <strong>at least 2 peers</strong> edit for mechanics, structure, and formatting
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('B4','B1','B2','B3')"></button>
+        </span>
+        </li>
+
+      <li class="messages" id = 'B3'>Writes a first draft
+        Has <strong>a peer</strong> edit for mechanics, structure, and formatting.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('B3','B1','B2','B4')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'B2'>Writes a draft but makes no revisions for the final draft.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('B2','B1','B4','B3')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'B1'>First draft of essay is missing.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('B1','B4','B2','B3')"></button>
+        </span>
+      </li>
+
+      <!-- C Row -->
+      <li class="messages">ELA1.3. Editing and Publishing: Uses a variety of strategies to edit and publish written work.
+      </li>
+
+      <li class="messages" id = 'C4'>Thoughtfully evaluates their own essay and has a peer evaluate their essay using the standards below.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('C4','C1','C2','C3')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'C3'>Thoughtfully evaluates their own essay using the standards below.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('C3','C1','C2','C4')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'C2'>Evaluates their own essay but clearly did not take it seriously as evaluation differs greatly from teacher's.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('C2','C1','C4','C3')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'C1'>Evaluations of essay are missing.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('C1','C4','C2','C3')"></button>
+        </span>
+      </li>
+
+      <!-- Span 3 rows D,E,F -->
+      <li class="messages span3Vertical" style="font-size:13.5px">ELA 1.6 Writes expository compositions (e.g. states a thesis or purpose; presents information that reflects knowledge about the topic of the report; organizes and presents information in a logical manner, including an introduction and conclusion; uses own words to develop ideas)
+        <br><br>ELA 2.2 Uses paragraph form in writing (e.g. arranges sentence in sequential order, uses supportive and follow up sentences, establishes coherence within and among paragraphs)
+      </li>
+
+      <!-- D Row -->
+      <li class="messages" id='D4'>Introduction contains a hook, thorough background of the novel and a strong, clear thesis.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('D4','D1','D2','D3')"></button>
+        </span>
+      </li>
+
+
+      <li class="messages" id = 'D3'>Introduction contains background of the novel and a clear thesis.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('D3','D1','D2','D4')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'D2'>Introduction contains some background of the novel. Thesis is somewhat clear.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('D2','D1','D4','D3')"></button>
+        </span>
+      </li>
+
+      <li class="messages" id = 'D1'>Introduction is missing one or all of the elements; Background and/or Thesis.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('D1','D4','D2','D3')"></button>
+        </span>
+      </li>
+
+      <!-- E Row -->
+      <li class = "messages" id = 'E4' style="font-size:11.9px">Body paragraphs align with the thesis with clear topic sentences and relevant supporting details in a logical order. Contains direct evidence from the novel and in-depth analysis in each paragraph.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('E4','E1','E2','E3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'E3' style="font-size:12px">Body paragraphs align with the thesis with clear topic sentences and relevant supporting details.  Contains direct evidence from the novel and analysis in all paragraphs.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('E3','E1','E2','E4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'E2' style="font-size:12px">Body paragraphs don’t necessarily align with the thesis. There is a lack of organization of supporting details. Direct evidence or analysis is missing in some of the body paragraphs.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('E2','E1','E4','E3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'E1' style="font-size:12px">Body paragraphs don’t align with the topic, and are missing several key parts; topic sentence, supporting details in the form of direct evidence and analysis.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('E1','E4','E2','E3')"></button>
+        </span>
+      </li>
+
+      <!-- F Row -->
+      <li class = "messages" id = 'F4' style ="font-size:12px">Conclusion restates the thesis and the main points, and provides a relevant and strong closing statement with a connection to the world, themselves or other literature.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('F4','F1','F2','F3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'F3'>Conclusion restates the thesis and provides an appropriate and fairly strong closing statement.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('F3','F1','F2','F4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'F2'>Conclusion does not clearly contain both elements; restatement of the thesis and a closing statement.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('F2','F1','F4','F3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'F1'>Conclusion is missing or is unconnected to the topic of the essay.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('F1','F4','F2','F3')"></button>
+        </span>
+      </li>
+
+      <!-- G Row -->
+      <li class = "messages span2Vertical">ELA 6.9 Understands inferred and recurring themes in literary works (e.g., bravery, loyalty, friendship, good v. evil; historical, cultural, and social themes)
+      </li>
+
+      <li class = "messages span2Vertical" id = 'G4'>Shows a clear and strong understanding of the theme(s) by:
+        -Citing and analysing at least 2 relevant textual examples of the chosen theme(s) in each body paragraph (6 total).
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('G4','G1','G2','G3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages span2Vertical" id = 'G3'>Shows a good understanding of the theme(s) by:
+        -Citing and analysing at least 1 relevant example of the chosen theme from the novel in each body paragraph (3 total).
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('G3','G1','G2','G4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages span2Vertical" id = 'G2'>Has trouble showing an understanding of the theme(s)
+        -Direct quotes from the novel do not exist in all paragraphs. Evidence from the novel may not support the chosen theme(s)
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('G2','G1','G4','G3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages span2Vertical" id = 'G1'>Does not show an understanding of the theme(s).
+        -Essay is simply a summary of the novel.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('G1','G4','G2','G3')"></button>
+        </span>
+      </li>
+
+      <!-- Spans 2 Rows -->
+      <li class="messages span2Vertical" style="font-size:14px">ELA 1.12 Writes in response to literature:, (e.g., responds to significant issues in a log or journal, answers discussion questions, writes a summary of a book, describes an initial impression of a text, connects knowledge from a text with personal knowledge, states an interpretive, evaluative, or reflective position)
+      </li>
+
+      <!-- H Row -->
+      <li class = "messages" id = 'H4' style="font-size:15px">All role sheets completed thoroughly and thoughtfully every week.  Student also kept a journal as they read.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('H4','H1','H2','H3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'H3'>All role sheets are completed thoroughly and thoughtfully every week.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('H3','H1','H2','H4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'H2'>Some role sheets were completed. Thoughts and reflections tended to be very basic in nature.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('H2','H1','H4','H3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'H1'>Role sheets were consistently incomplete each week.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('H1','H4','H2','H3')"></button>
+        </span>
+      </li>
+
+      <!-- I Row -->
+      <li class = "messages" id = 'I4' style="font-size:14px">Contributed a thoughtful response to each week's discussion post and appropriately and posted a meaningful  response to other student posts
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('I4','I1','I2','I3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'I3' style="font-size:14px">Contributed a thoughtful response to each week's discussion post. Response to other student posts are simple "I agree" statements.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('I3','I1','I2','I4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id ='I2'>Sometimes contributed to the online discussion.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('I2','I1','I4','I3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id ='I1'>Did not contribute to any online discussions
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('I1','I4','I2','I3')"></button>
+        </span>
+      </li>
+
+      <!-- J Row -->
+      <li class = "messages">ELA 3 Uses grammatical and mechanical conventions in written compositions
+      </li>
+
+      <li class = "messages" id = 'J4'>There are NO spelling, grammar, or punctuation errors in essay.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('J4','J1','J2','J3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'J3' style="font-size:15px">There are few spelling, grammar, or punctuation errors in essay, but they do not take away from the overall quality.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('J3','J1','J2','J4')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'J2' style="font-size:14.5px">There are a number of spelling, grammar, or punctuation errors in essay that make it somewhat difficult to understand the essay
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('J2','J1','J4','J3')"></button>
+        </span>
+      </li>
+
+      <li class = "messages" id = 'J1'>Essay is unreadable due to the amount of mechanical errors.
+        <span>
+          <button type="button" class="buttonNormal" onclick = "myFunction('J1','J4','J2','J3')"></button>
+        </span>
+      </li>
+
+      <!-- End of Rows -->
+
+
+      <!-- Score -->
+      <li class="messages" style="background:transparent"></li>
+      <li class="messages score"><i>SCORE</i>
+        <span>
+          <button type="button" class="buttonScore" onclick = "Score()" id = 'Score'></button>
+        </span>
+      </li>
+
+      <!-- Functions -->
+        <script>
+
+        var c = 0;
+
+        function myFunction(z,s1,s2,s3) {
+          var x = document.getElementById(z);
+          var color;
+
+          if (document.getElementById(s1).style.background != 'rgb(240, 163, 10)' || document.getElementById(s2).style.background != 'rgb(240, 163, 10)' || document.getElementById(s3).style.background != 'rgb(240, 163, 10)'){
+            c = 0;
+          }
+
+          c++;
+
+          if (c == 1) {
+            color = 'rgb(255, 105, 97)';
+          }else if (c == 2){
+            color ='rgb(27, 161, 226)';
+          } else if (c == 3){
+            color = 'rgb(0, 192, 0)';
+          }else{
+            c = 0;
+            color = "rgb(240, 163, 10)";/*orange*/
+          }
+          x.style.background = color;
+
+          x = document.getElementById(s1);
+          x.style.background = "rgb(240, 163, 10)";
+          x = document.getElementById(s2);
+          x.style.background = "rgb(240, 163, 10)";
+          x = document.getElementById(s3);
+          x.style.background = "rgb(240, 163, 10)";
+        }
+
+      var Cell;
+      var knum;
+      var Score = 0;
+
+      function Score(){
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'A' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'B' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'C' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'D' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'E' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'F' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'G' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'H' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'I' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        for (k = 1; k <=4; k++){
+          knum = k;
+          Cell = 'J' + knum.toString();
+          x = document.getElementById(Cell).style.background;
+          if (x = 'rgb(255, 105, 97)') {
+            Score += .3 + (k-1);
+          }else if(x = 'rgb(27, 161, 226)'){
+            Score += .7 + (k-1);
+          }else if(x = 'rgb(0, 192, 0)'){
+            Score += 1 + (k-1);
+          }
+        }
+        window.alert(Score);
+      }
+
+      </script>
+
+  </ul>
+
+</main>
+
+</body>
+</html>
